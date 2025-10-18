@@ -66,6 +66,7 @@ services:
       - redis
     volumes:
       - ../behyaft-core-backend:/var/www
+      - ../shared-jobs:/var/www/shared-jobs
 
   behyaft-marketplace:
     build:
@@ -78,6 +79,7 @@ services:
       - redis
     volumes:
       - ../behyaft-marketplace-backend:/var/www
+      - ../shared-jobs:/var/www/shared-jobs
 
   behyaft-notifications:
     build:
@@ -90,6 +92,7 @@ services:
       - redis
     volumes:
       - ../behyaft-notifications-backend:/var/www
+      - ../shared-jobs:/var/www/shared-jobs
 
 volumes:
   db_data:
